@@ -80,10 +80,10 @@ main p {
 .image-text {
     display: flex;
     color: white;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     align-items: flex-start;
     text-align: left;
-    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    flex-wrap: wrap;
     margin-right: 300px;
 }
 
@@ -155,8 +155,40 @@ main img {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 10px;
     z-index: 1;
-    width: 150px; /* Adjust the width as needed */
+    width: 150px;
     box-sizing: border-box;
     right: 40px;
     top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 22px;
+    }
 }
