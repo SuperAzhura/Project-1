@@ -1,71 +1,69 @@
-// When a link is clicked, toggle the visibility of the corresponding dropdown
-window.addEventListener('click', function(event) {
-    var experienceDropdown = document.getElementById('experience-dropdown');
-    var proficienciesDropdown = document.getElementById('proficiencies-dropdown');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <img src="huskylogo.png" alt="SuperAzhuralogo" width="50" height="50">
+        <div class="title-container">
+            <h1> "You can do anything, if you give yourself the breathing room to do so." </h1>
+            <h2>-PirateSoftware</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#contact" id="contact-link">Contact</a></li>
+                <div id="contact-dropdown" class="dropdown-content">
+                    <p>Email: marktater9@gmail.com</p>
+                    <p>Phone: (321)-616-3333</p>
+                </div>
+            </ul>
+        </nav>
+    </header>
 
-    // Check if the clicked target is the "Experience" link or its dropdown
-    if (event.target.matches('#experience-link') || event.target.matches('#experience-dropdown')) {
-        experienceDropdown.style.display = (experienceDropdown.style.display === 'block') ? 'none' : 'block';
-    } else {
-        // If not the "Experience" link or its dropdown, hide the "Experience" dropdown
-        experienceDropdown.style.display = 'none';
-    }
 
-    // Check if the clicked target is the "Proficiencies" link or its dropdown
-    if (event.target.matches('#proficiencies-link') || event.target.matches('#proficiencies-dropdown')) {
-        proficienciesDropdown.style.display = (proficienciesDropdown.style.display === 'block') ? 'none' : 'block';
-    } else {
-        // If not the "Proficiencies" link or its dropdown, hide the "Proficiencies" dropdown
-        proficienciesDropdown.style.display = 'none';
-    }
-});
+    <main>
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <section>
+            <div class="image-text">
+                <h1>Super Azhura<br><p>Hero of the North<br>Sage of the South</p></h1>
+                <img src="huskylogo.png" alt="SuperAzhuralogo" width="300" height="300">
+            </div>
+        </section>
+        <section>
+            <h2>Who Am I?</h2>
+            <p>A dedicated and results-driven professional, with experience in field technician roles,<br> system administration, web and application development and cloud computing.</p>
+        </section>
+        <div class="body-container">
+            <ul>
+                <li><a href="#experience" id="experience-link">Experience</a></li>
+                <li><a href="#proficiencies" id="proficiencies-link">Proficiencies</a></li>
+                <li><a href="#certifications" id="certifications-link">Certifications</a></li>    
+            </ul>
 
-window.addEventListener('resize', function() {
-    var video = document.getElementById('background-video');
-    video.style.width = window.innerWidth + 'px';
-    video.style.height = window.innerHeight + 'px';
-});
+            <div id="experience-dropdown" class="dropdown-content">
+                <p>Charter Coummunications - Field Technician<br><br>Installed and repaired coaxial and fiber based cable, internet and voice services.<br><br>Assist customers with the operation and understanding of their equipment.<br><br>Handled equipment information on customer accounts as needed.<br><br>Proficient with a variety of hand and power tools required for the successful installation and repair of services.<br><br><br>United States Marine Corps - Data Systems Administrator<br><br>Configured and maintained private networks, servers end devices and other communication systems.<br><br>Pushed software updates, while providing technical guidance, updating user profiles, and resolved system outages.<br><br>Setup operational communication sites in remote locations regardless of weather and terrain in a timely manner.<br><br>Implemented best practices to ensure cyber security.</p>
+            </div>
+            <div id="proficiencies-dropdown" class="dropdown-content">
+                <p>Network Installation and Configuration<br><br>HTML/CSS/JavaScript/Python/Django Framework<br><br>VMware/Hyper-V/Cloud Computing<br><br>Version Control/Git/Github/Bash/Powershell</p>
+            </div>
+            <div id="certifications-dropdown" class="dropdown-content">
+                <p>
+                    <a href="introwebdevcert.pdf" target="_blank">Introduction to Web Development</a><br>
+                    <a href="webdevcert.pdf" target="_blank">Web Development</a><br>
+                    <a href="gitgithubcert.pdf" target="_blank">Git/Github</a><br>
+                    <a href="cloudcert.pdf" target="_blank">Cloud Computing</a><br>
+                </p>   
+            </div>
+        </div>
+    </main>
 
-// When the "Certifications" link is clicked, toggle the visibility of the dropdown
-document.getElementById('certifications-link').addEventListener('click', function() {
-    var dropdown = document.getElementById('certifications-dropdown');
-
-    // If the dropdown is currently visible, hide it; otherwise, show it
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
-});
-
-// Close the certifications dropdown if the user clicks outside of it
-window.addEventListener('click', function(event) {
-    var dropdown = document.getElementById('certifications-dropdown');
-
-    // If the clicked target is outside the link and the dropdown, hide the dropdown
-    if (!event.target.matches('#certifications-link') && !event.target.matches('#certifications-dropdown')) {
-        dropdown.style.display = 'none';
-    }
-});
-
-// When the "Contact" link is clicked, toggle the visibility of the dropdown
-document.getElementById('contact-link').addEventListener('click', function() {
-    var dropdown = document.getElementById('contact-dropdown');
-
-    // If the dropdown is currently visible, hide it; otherwise, show it
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
-});
-
-// Close the contact dropdown if the user clicks outside of it
-window.addEventListener('click', function(event) {
-    var dropdown = document.getElementById('contact-dropdown');
-
-    // If the clicked target is outside the link and the dropdown, hide the dropdown
-    if (!event.target.matches('#contact-link') && !event.target.matches('#contact-dropdown')) {
-        dropdown.style.display = 'none';
-    }
-});
+    <script src="script.js"></script>
+</body>
+</html>
