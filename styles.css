@@ -1,0 +1,162 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container {
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+}
+
+main h2 {
+    font-size: 35px;
+}
+
+main p {
+    font-size: 30px;
+}
+
+.image-text {
+    display: flex;
+    color: white;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start;
+    text-align: left;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    margin-right: 300px;
+}
+
+.image-text h1 {
+    margin-top: 150px;
+    margin-left: 0px;
+    color: white;
+}
+
+.image-text p {
+    font-size: 20px;
+    color: white;
+}
+
+main img { 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 5 auto;
+}
+
+.body-container {
+    text-align: center;
+    color: white;
+}
+
+.body-container ul {
+    display: flex;
+    color: white;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 250px;
+}
+
+.body-container li {
+    margin: 0 20px;
+    color: white;
+    margin-top: 200px;
+}
+
+.body-container li a {  
+    margin-right: 300px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown-content p {
+    margin: 0;
+    color: white;
+}
+
+#contact-dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    width: 150px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    right: 40px;
+    top: 60px;
+}
