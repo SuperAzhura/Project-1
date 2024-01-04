@@ -48,24 +48,28 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// When the "Contact" link is clicked, toggle the visibility of the dropdown
-document.getElementById('contact-link').addEventListener('click', function() {
-    var dropdown = document.getElementById('contact-dropdown');
+// Function to open the contact modal
+function openContactModal() {
+    var modal = document.getElementById('contactModal');
+    modal.style.display = 'block';
+}
 
-    // If the dropdown is currently visible, hide it; otherwise, show it
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
-});
+// Function to close the contact modal
+function closeContactModal() {
+    var modal = document.getElementById('contactModal');
+    modal.style.display = 'none';
+}
 
-// Close the contact dropdown if the user clicks outside of it
+// Event listener for opening the contact modal
+document.getElementById('contact-link').addEventListener('click', openContactModal);
+
+// Event listener for closing the contact modal
+document.getElementById('closeContactModal').addEventListener('click', closeContactModal);
+
+// Close the contact modal if the user clicks outside of it
 window.addEventListener('click', function(event) {
-    var dropdown = document.getElementById('contact-dropdown');
-
-    // If the clicked target is outside the link and the dropdown, hide the dropdown
-    if (!event.target.matches('#contact-link') && !event.target.matches('#contact-dropdown')) {
-        dropdown.style.display = 'none';
+    var modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeContactModal();
     }
 });
