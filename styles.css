@@ -193,6 +193,9 @@ main img {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
     .dropdown-content {
         position: relative;
         width: 100%;
@@ -203,17 +206,29 @@ main img {
     body {
         font-size: 18px;
     }
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
     body {
         font-size: 20px;
     }
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1025px) {
     body {
         font-size: 22px;
+    }
+    .dropdown-content {
+        position: relative;
+        width: 100%;
     }
 }
 
